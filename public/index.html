@@ -158,5 +158,21 @@
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <script src="app.js"></script>
 <div style="text-align:center; margin:20px 0;"><a href="https://wa.me/?text=جرب موقع SHIELD-AI لكشف النصب والاحتيال مجانا: https://shield-ai-phi.vercel.app" target="_blank" style="display:inline-block; background:#25D366; color:white; padding:12px 25px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:16px;">📤 شارك على واتساب</a></div><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js")}</script>
+
+<section id="pro" style="padding:40px 20px;text-align:center;background:linear-gradient(135deg,#0A0F1E,#1E1B4B);border-radius:20px;margin:20px;">
+<h2 style="font-size:28px;">🔥 SHIELD <span style="color:#00E5FF;">PRO</span></h2>
+<p style="opacity:.8;">فحص غير محدود + تنبيه فوري + تقرير PDF</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+<div style="background:#111827;padding:20px;border-radius:16px;flex:1;min-width:140px;border:1px solid #333;"><h3>شهري</h3><h2>49 ج</h2><p>شهر واحد</p><button onclick="buyPro('monthly')" style="background:#00E5FF;color:#000;padding:10px 20px;border:none;border-radius:10px;font-weight:bold;width:100%;">اشترك</button></div>
+<div style="background:#7C3AED;padding:20px;border-radius:16px;flex:1;min-width:140px;border:2px solid #00E5FF;"><h3>⭐ سنوي</h3><h2>399 ج</h2><p>وفر 30%</p><button onclick="buyPro('yearly')" style="background:#fff;color:#000;padding:10px 20px;border:none;border-radius:10px;font-weight:bold;width:100%;">اشترك</button></div>
+</div>
+<p id="pro-msg" style="margin-top:15px;color:#00E5FF;"></p>
+</section>
+<script>
+function buyPro(plan){
+  document.getElementById('pro-msg').innerText = 'تم اختيار باقة ' + plan + ' - تواصل واتساب للتفعيل: 01000000000';
+  alert('للدفع: فودافون كاش / انستا باي - ابعت سكرين واتساب وهنفعلك PRO');
+}
+</script>
 </body>
 </html>
