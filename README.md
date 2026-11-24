@@ -1,23 +1,31 @@
 # SHIELD-AI
-Smart AI Protection System
+AI-powered digital scam detection
 
-SHIELD-AI is a project to protect systems and apps using Artificial Intelligence.
-It detects threats and attacks before they happen.
+SHIELD-AI detects digital scams and fraud using Artificial Intelligence.
 
 ## Features
-- Automatic threat detection
+- Automatic scam detection
 - Smart AI analysis
-- Real-time response
-- Full system protection
+- Real-time protection
+- Web dashboard
 
 ## How to Run
-pip install -r requirements.txt
-python main.py
+npm install
+npm start
+
+Then open in browser:
+http://localhost:3000
 
 ## Technologies
-- Python
+- Node.js
+- Express.js
+- JavaScript
 - Artificial Intelligence
-- Machine Learning
+
+## Project Structure
+- src/ - Server code
+- public/ - Website files
+- data/ - Data files
 
 ## Developer
 Abdo Abdelbaset
