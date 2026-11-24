@@ -1,0 +1,11 @@
+{
+  "name": "SHIELD-AI",
+  "short_name": "SHIELD-AI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
+  "icons": [
+    {"src": "/icon.svg","sizes": "512x512","type": "image/svg+xml","purpose": "any"}
+  ]
+}
