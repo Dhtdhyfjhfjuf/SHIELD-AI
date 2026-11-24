@@ -1,0 +1,17 @@
+{
+  "name": "shield-ai",
+  "version": "1.0.0",
+  "description": "AI-powered digital scam detection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

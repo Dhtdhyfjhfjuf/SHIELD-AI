@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080e18">
+  <title>SHIELD AI | الحماية الذكية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">⬡</div>
+      <div>
+        <h1>SHIELD<span> AI</span></h1>
+        <small>YOUR DIGITAL SECURITY PARTNER</small>
+      </div>
+    </div>
+    <div class="status"><i></i> النظام جاهز</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shield">🛡️</div>
+      <p class="eyebrow">SMART DIGITAL PROTECTION</p>
+      <h2>خليك <span>في أمان</span><br>في العالم الرقمي</h2>
+      <p class="intro">افحص الرسائل والروابط المشبوهة واكتشف علامات الاحتيال قبل ما تتفاعل معاها.</p>
+    </section>
+
+    <section class="scanner">
+      <div class="section-heading">
+        <div>
+          <h3>مركز الفحص الذكي</h3>
+          <p>أدخل النص أو الرابط المراد فحصه</p>
+        </div>
+        <span class="scan-icon">⌕</span>
+      </div>
+
+      <div class="vision-upload">
+        <input type="file" id="imageInput" accept="image/*" hidden>
+        <button type="button" id="imageButton" class="image-button">
+          <span>📷</span>
+          <span>ارفع صورة للفحص</span>
+        </button>
+        <div id="imagePreview" class="image-preview hidden"></div>
+        <p id="ocrStatus" class="ocr-status">ارفع صورة رسالة أو لقطة شاشة</p>
+      </div>
+
+      <textarea id="scanInput" placeholder="الصق هنا رسالة مشبوهة أو رابط..."></textarea>
+
+      <div class="input-footer">
+        <span>🔒 لا تدخل كلمات مرور أو بيانات بنكية</span>
+        <span id="charCount">0 / 5000</span>
+      </div>
+
+      <button id="scanButton" onclick="scanText()">
+        <span>✦</span> ابدأ الفحص الذكي
+      </button>
+
+      <div id="result" class="result hidden"></div>
+    </section>
+
+
+    <section class="history-section" id="historySection">
+      <div class="section-heading">
+        <div>
+          <h3>🛡️ SHIELD HISTORY</h3>
+          <p>السجل الكامل لعمليات الفحص السابقة</p>
+        </div>
+        <button type="button" id="refreshHistory" class="history-refresh">↻ تحديث</button>
+      </div>
+
+      <div class="history-stats">
+        <div class="history-stat">
+          <strong id="totalScans">0</strong>
+          <span>إجمالي الفحوصات</span>
+        </div>
+        <div class="history-stat">
+          <strong id="highScans">0</strong>
+          <span>خطورة مرتفعة</span>
+        </div>
+        <div class="history-stat">
+          <strong id="mediumScans">0</strong>
+          <span>خطورة متوسطة</span>
+        </div>
+        <div class="history-stat">
+          <strong id="lowScans">0</strong>
+          <span>خطورة منخفضة</span>
+        </div>
+      </div>
+
+      <input type="search" id="historySearch"
+        class="history-search" placeholder="ابحث في الفحوصات السابقة...">
+
+      <div class="history-date-filters">
+        <label>
+          من تاريخ
+          <input type="date" id="historyFrom">
+        </label>
+        <label>
+          إلى تاريخ
+          <input type="date" id="historyTo">
+        </label>
+        <button type="button" id="resetHistoryDates">إلغاء التاريخ</button>
+      </div>
+
+      <div class="history-filters">
+        <button class="history-filter active" data-filter="all">الكل</button>
+        <button class="history-filter" data-filter="high">مرتفعة</button>
+        <button class="history-filter" data-filter="medium">متوسطة</button>
+        <button class="history-filter" data-filter="low">منخفضة</button>
+      </div>
+
+      <div id="historyList" class="history-list">
+        <p class="history-empty">جارٍ تحميل سجل الفحوصات...</p>
+      </div>
+
+      <button type="button" id="clearHistory" class="clear-history">
+        🗑️ مسح سجل الفحوصات
+      </button>
+    </section>
+
+    <section class="features">
+      <h3>ماذا يستطيع SHIELD AI فحصه؟</h3>
+      <div class="feature-grid">
+        <div class="feature">
+          <span>🔗</span>
+          <h4>الروابط</h4>
+          <p>مؤشرات الروابط المزيفة والمريبة</p>
+        </div>
+        <div class="feature">
+          <span>💬</span>
+          <h4>الرسائل</h4>
+          <p>علامات رسائل التصيد والاحتيال</p>
+        </div>
+        <div class="feature">
+          <span>🖼️</span>
+          <h4>الصور</h4>
+          <p>فحص محتوى لقطات الشاشة لاحقًا</p>
+        </div>
+        <div class="feature">
+          <span>▦</span>
+          <h4>QR Code</h4>
+          <p>فحص الوجهة قبل فتحها لاحقًا</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>SHIELD AI © 2026</p>
+      <small>الحماية تبدأ بالوعي</small>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
